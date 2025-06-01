@@ -30,18 +30,52 @@ html {
  */
 a {
   // color: $brand-color;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 100;
-  color: variables.$text-color;
+  color: inherit;
   // @include on-event {
   //   // color: $text-color;
   //   text-decoration: none;
   // }
 }
 
+a
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none !important;
+  color: inherit !important; // Keeps them same as parent text color
+  font-weight: normal; // Optional: reset weight if needed
+}
+
 a:hover {
   color: #f00;
 }
+
+figure.hover-caption {
+  position: relative;
+  display: inline-block;
+}
+
+figure.hover-caption figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* optional: translucent dark */
+  color: white;
+  padding: 0.5em;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* ensures caption doesn't block hover */
+}
+
+figure.hover-caption:hover figcaption {
+  opacity: 1;
+}
+
 
 p {
   margin-top: 0;
