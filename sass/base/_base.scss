@@ -25,6 +25,13 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /**
  * Basic styles for links
  */

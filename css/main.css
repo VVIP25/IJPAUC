@@ -329,6 +329,12 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /**
  * Basic styles for links
  */
@@ -919,6 +925,30 @@ input[type=checkbox] {
 .video-container {
   margin: 0;
   margin-bottom: 1em;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+}
+
+figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.5em;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+figure:hover figcaption {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
