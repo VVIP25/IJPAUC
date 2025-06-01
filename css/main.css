@@ -344,8 +344,7 @@ a {
   color: inherit;
 }
 
-a a:visited,
-a:hover,
+a a:hover,
 a:active {
   text-decoration: none !important;
   color: inherit !important;
@@ -949,6 +948,18 @@ figure figcaption {
 
 figure:hover figcaption {
   opacity: 1;
+}
+
+marginalia {
+  display: none;
+  color: #666;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-left: 0.3em;
+}
+
+.show-marginalia marginalia {
+  display: inline;
 }
 
 /*# sourceMappingURL=main.css.map */
