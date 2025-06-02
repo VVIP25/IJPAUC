@@ -1,0 +1,48 @@
+.mini-album {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.mini-album img {
+  width: 100%;
+  height: auto;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.mini-album img.active {
+  display: block;
+}
+
+.mini-album button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  z-index: 1;
+  transition: background 0.2s ease;
+}
+
+.mini-album button:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.mini-album .prev {
+  left: 10px;
+}
+
+.mini-album .next {
+  right: 10px;
+}
