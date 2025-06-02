@@ -1,4 +1,6 @@
 main {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  max-width: 72rem;   // or 64rem, match your desired content width
+  margin: 0 auto;     // center horizontally
+  padding: 0 1.5rem;  // some breathing room on small screens
 }

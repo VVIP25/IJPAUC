@@ -12,18 +12,11 @@
   overflow: hidden;
   border-radius: 8px;
   text-align: center;
+  transition: box-shadow 0.3s ease;
 }
 
 .image-grid img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.image-grid figcaption {
-  font-size: 0.9rem;
-  color: #444;
-  padding: 0.5em;
-  line-height: 1.4;
-  background: #f8f8f8;
 }
