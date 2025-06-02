@@ -664,6 +664,30 @@ main {
   padding-right: 1.5em;
 }
 
+.clip-image {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.clip-image:hover {
+  transform: scale(1.01);
+}
+.clip-image::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  height: 100%;
+  background: repeating-radial-gradient(circle at center, #000 0px, #000 6px, transparent 6px, transparent 90px);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100% 120px;
+  opacity: 0.8;
+  z-index: 10;
+}
+
 #hero-image-container {
   position: relative;
   height: calc(100vh + 20px);
@@ -919,6 +943,10 @@ input[type=checkbox] {
   column-gap: 2em;
   text-align: justify;
   margin: 2em 0;
+}
+
+.old-photo {
+  opacity: 0.8;
 }
 
 .police-report {
