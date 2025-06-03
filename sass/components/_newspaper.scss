@@ -1,9 +1,31 @@
 .newspaper {
   font-family: 'Georgia', serif;
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 0.95em;
+  line-height: 1.45;
   column-count: 1;
   column-gap: 2em;
   text-align: justify;
-  margin: 2em 0;
+  margin: 0.75em 0;
+  color: #222;
+
+  em {
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  cite {
+    display: block;
+    font-style: italic;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0.5em;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0.75em 0;
+  }
 }
