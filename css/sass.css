@@ -717,6 +717,53 @@ main {
   height: auto;
 }
 
+.fade-toggle {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  /* Hide the checkbox itself */
+  /* The <label> holds both images, stacked on top of each other */
+  /* Both images occupy the same position */
+  /* The “front” image: visible by default */
+  /* The “back” image: hidden by default */
+  /* When checkbox is checked, swap opacities */
+}
+.fade-toggle input {
+  display: none;
+}
+.fade-toggle label {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.fade-toggle img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+.fade-toggle .img-1 {
+  opacity: 1;
+  z-index: 2;
+}
+.fade-toggle .img-2 {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-toggle input:checked + label .img-1 {
+  opacity: 0;
+}
+.fade-toggle input:checked + label .img-2 {
+  opacity: 1;
+}
+
 #hero-image-container {
   max-width: 900px; /* ← adjust this to match your content width */
   width: 100%;
