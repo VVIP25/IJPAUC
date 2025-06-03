@@ -1,0 +1,51 @@
+.quote-toggle {
+  margin: 1.5rem 0;
+  font-size: inherit;
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: normal;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    display: inline;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    .clickable-word {
+      cursor: pointer;
+
+      .punctuation {
+        &.collapsed {
+          display: inline;
+        }
+        &.expanded {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // ✅ Corrected selectors
+  &.quote-toggle[open] summary .punctuation.collapsed {
+    display: none;
+  }
+
+  &.quote-toggle[open] summary .punctuation.expanded {
+    display: inline;
+  }
+
+  ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+    color: #444;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+}

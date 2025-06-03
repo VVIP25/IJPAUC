@@ -675,19 +675,26 @@ main {
 .clip-image:hover {
   transform: scale(1.01);
 }
-.clip-image::before {
+.clip-image::before, .clip-image::after {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background: repeating-linear-gradient(to right, transparent 0px, transparent 12px, #000 12px, #000 20px, transparent 20px, transparent 40px);
+  z-index: 2;
+  opacity: 0.85;
+}
+.clip-image::before {
   top: 0;
-  width: 16px;
-  height: 100%;
-  background: repeating-radial-gradient(circle at center, #000 0px, #000 6px, transparent 6px, transparent 90px);
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: 100% 120px;
-  opacity: 0.8;
-  z-index: 10;
+}
+.clip-image::after {
+  bottom: 0;
+}
+.clip-image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 #hero-image-container {
@@ -945,6 +952,47 @@ input[type=checkbox] {
   margin: 2em 0;
   max-width: 60ch;
   line-height: 1.4;
+}
+
+.quote-toggle {
+  margin: 1.5rem 0;
+  font-size: inherit;
+}
+.quote-toggle summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: normal;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+.quote-toggle summary::-webkit-details-marker {
+  display: none;
+}
+.quote-toggle summary .clickable-word {
+  cursor: pointer;
+}
+.quote-toggle summary .clickable-word .punctuation.collapsed {
+  display: inline;
+}
+.quote-toggle summary .clickable-word .punctuation.expanded {
+  display: none;
+}
+.quote-toggle.quote-toggle[open] summary .punctuation.collapsed {
+  display: none;
+}
+.quote-toggle.quote-toggle[open] summary .punctuation.expanded {
+  display: inline;
+}
+.quote-toggle ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+  border-left: 3px solid #ccc;
+  color: #444;
+}
+.quote-toggle p {
+  margin: 0.5em 0;
 }
 
 .redact-toggle:not(:checked) + a {
