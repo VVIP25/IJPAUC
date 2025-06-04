@@ -6,6 +6,7 @@
 }
 
 .image-grid figure {
+  position: relative;
   margin: 0;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -13,6 +14,24 @@
   border-radius: 8px;
   text-align: center;
   transition: box-shadow 0.3s ease;
+
+  figcaption {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
+    background: rgba(255, 255, 255, 0.85);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover figcaption {
+    opacity: 1;
+  }
 }
 
 .image-grid img {
@@ -20,3 +39,4 @@
   height: auto;
   display: block;
 }
+
