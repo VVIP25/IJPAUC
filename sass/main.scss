@@ -25,16 +25,17 @@
 @use 'components/blockquote';
 @use 'components/clip-image';
 @use 'components/fade-toggle';
+@use 'components/fade-once-toggle';
 @use 'components/hero_image';
 @use 'components/image-grid';
 @use 'components/letter';
 @use 'components/menu_button';
 @use 'components/mini-album';
+@use 'components/magnify-container';
 @use 'components/modal';
 @use 'components/movietitle';
 @use 'components/nav';
 @use 'components/newspaper';
-@use 'components/old-photo';
 @use 'components/police-report';
 @use 'components/quote-toggle';
 @use 'components/redacted_text';
@@ -42,6 +43,7 @@
 @use 'components/transcript';
 @use 'components/video_resize';
 @use 'components/video_container';
+@use 'components/wraparound-carousel';
 
 // 6. Page-specific styles
 @use 'pages/home';
