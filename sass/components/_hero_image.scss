@@ -1,7 +1,9 @@
 #hero-image-container {
+  position: relative;
   width: 100%;
   margin: 2rem 0;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 #hero-image {
@@ -17,3 +19,15 @@
     max-height: 55vh;
   }
 }
+
+.hero-image-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f00;
+  text-align: center;
+  font-size: 5.5cqw;
+}
+
