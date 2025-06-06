@@ -859,6 +859,11 @@ main {
   display: block;
 }
 
+.image-grid a {
+  display: block;
+  cursor: zoom-in;
+}
+
 .letter {
   border: lightgrey double 10px;
   padding: 1em;
@@ -1094,33 +1099,11 @@ input[type=checkbox] {
 }
 
 .newspaper {
-  font-family: "Georgia", serif;
-  font-size: 0.95em;
-  line-height: 1.45;
-  column-count: 1;
-  column-gap: 2em;
-  text-align: justify;
-  margin: 0.75em 0;
-  color: #222;
-}
-.newspaper em {
-  font-style: italic;
-  font-weight: normal;
-}
-.newspaper cite {
-  display: block;
-  font-style: italic;
-  font-size: 0.85em;
-  color: #666;
-  margin-top: 0.5em;
-}
-.newspaper strong {
-  font-weight: 500;
+  font-family: "Times New Roman", serif;
 }
 .newspaper p {
-  margin: 0.75em 0;
+  margin-bottom: 1rem;
 }
-
 .police-report {
   font-family: "Courier Prime", Courier, monospace;
   background-color: #f8f8f8;
