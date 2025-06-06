@@ -403,13 +403,14 @@ h3 {
 body {
   color: rgb(0, 0, 0);
   font-weight: 300;
-  font-size: 0.2em;
-  font: normal 20px "EB Garamond", serif;
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 p, li {
-  font-size: 21px;
-  line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1.6;
 }
 
 .header a {
@@ -1118,31 +1119,19 @@ input[type=checkbox] {
   margin: 1.5rem 0;
   font-size: inherit;
 }
-.quote-toggle summary {
-  cursor: pointer;
-  list-style: none;
-  font-weight: normal;
-  font-size: inherit;
-  padding: 0;
-  margin: 0;
-  display: inline;
-}
-.quote-toggle summary::-webkit-details-marker {
-  display: none;
-}
-.quote-toggle summary .clickable-word {
+.quote-toggle .clickable-word {
   cursor: pointer;
 }
-.quote-toggle summary .clickable-word .punctuation.collapsed {
+.quote-toggle .clickable-word .punctuation.collapsed {
   display: inline;
 }
-.quote-toggle summary .clickable-word .punctuation.expanded {
+.quote-toggle .clickable-word .punctuation.expanded {
   display: none;
 }
-.quote-toggle.quote-toggle[open] summary .punctuation.collapsed {
+.quote-toggle[open] summary .punctuation.collapsed {
   display: none;
 }
-.quote-toggle.quote-toggle[open] summary .punctuation.expanded {
+.quote-toggle[open] summary .punctuation.expanded {
   display: inline;
 }
 .quote-toggle ul {
@@ -1153,6 +1142,19 @@ input[type=checkbox] {
 }
 .quote-toggle p {
   margin: 0.5em 0;
+}
+
+summary {
+  all: unset;
+  display: inline;
+  font-family: "EB Garamond", serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: inherit !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
 }
 
 .redact-toggle:not(:checked) + a {
@@ -1302,6 +1304,15 @@ video[poster] {
   opacity: 1;
   pointer-events: auto;
   z-index: 2;
+}
+
+body {
+  color: #000;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
 }
 
 figure {

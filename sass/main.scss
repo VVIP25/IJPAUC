@@ -52,6 +52,17 @@
 // 7. Themes
 @use 'themes/default';
 
+// ✅ Add this here:
+body {
+  color: #000;
+}
+
+// Existing styles follow:
+figure {
+  position: relative;
+  display: inline-block;
+}
+
 figure {
   position: relative;
   display: inline-block;

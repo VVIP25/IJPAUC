@@ -7,13 +7,14 @@
 body {
   color: variables.$text-color;
   font-weight: 300;
-  font-size: 0.2em;
-  font: normal 20px variables.$text-font-stack;
+  font-family: variables.$text-font-stack;
+font-size: 18px; // or 20px if you prefer
+font-weight: 300;
 }
 
 p, li {
-  font-size: 21px;
-  line-height: 1.5em;
+  font-size: 1em; // or 1.1em if you want it a bit larger
+  line-height: 1.6;
 }
 
 .header a {
