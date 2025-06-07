@@ -54,3 +54,16 @@ h1
 .underlined {
   text-decoration: underline;
 }
+
+summary {
+  all: unset;
+  display: inline;
+  font-size: inherit;
+  font-family: "EB Garamond", serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: inherit !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
