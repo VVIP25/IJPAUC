@@ -878,6 +878,31 @@ main {
   cursor: zoom-in;
 }
 
+.image-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.image-grid-2x2 figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.image-grid-2x2 figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.image-grid-2x2 figure figcaption {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  background-color: #fafafa;
+  text-align: center;
+}
+
 .letter {
   border: lightgrey double 10px;
   padding: 1em;
@@ -988,6 +1013,57 @@ main {
 }
 .magnify-container .magnifier-wrap:hover::after {
   animation: followMouse 0s infinite;
+}
+
+.microlibrary {
+  font-family: Georgia, serif;
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+.microlibrary h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3em;
+}
+.microlibrary details {
+  margin-bottom: 1.5em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-left: 5px solid #888;
+  background-color: #fdfdfd;
+  border-radius: 6px;
+}
+.microlibrary details summary {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+.microlibrary details .blockquote {
+  font-style: italic;
+  color: #333;
+  margin-top: 0.5em;
+}
+
+.tag-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  margin: 1em 0;
+}
+.tag-nav a {
+  background: #eee;
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+.tag-nav a:hover {
+  background: #ddd;
 }
 
 .button {

@@ -2,4 +2,3 @@ Media essay by WJC based on original concept, "Mystic Cineplex," co-developed wi
 
 IJPAUC.NET
 VVIPmedia.NET
-YouTube
