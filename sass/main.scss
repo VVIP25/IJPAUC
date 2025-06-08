@@ -29,6 +29,7 @@
 @use 'components/hero_image';
 @use 'components/image-grid';
 @use 'components/image-grid-2';
+@use 'components/index-entry';
 @use 'components/letter';
 @use 'components/menu_button';
 @use 'components/mini-album';
@@ -48,6 +49,7 @@
 @use 'components/video_resize';
 @use 'components/video_container';
 @use 'components/wraparound-carousel';
+
 
 // 6. Page-specific styles
 @use 'pages/home';
