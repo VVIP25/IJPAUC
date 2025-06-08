@@ -803,15 +803,13 @@ main {
 #hero-image-container {
   position: relative;
   width: 100%;
-  margin: 2rem 0;
-  overflow: hidden;
   container-type: inline-size;
   background: #000;
   margin-bottom: 2em;
 }
 
 #hero-image {
-  width: 50%;
+  width: 768px;
   height: auto;
   display: block;
   object-fit: cover;
@@ -820,24 +818,24 @@ main {
 }
 
 @media (max-width: 768px) {
-  #hero-image-container {
-    max-height: 55vh;
+  #hero-image {
+    width: 100%;
   }
 }
 .hero-image-text {
+  width: 100%;
   position: absolute;
-  width: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f00;
   text-align: center;
-  font-size: 3cqw;
+  font-size: 2.5em;
 }
 
 @media (max-width: 768px) {
   .hero-image-text {
-    font-size: 5cqw;
+    font-size: 10cqw;
   }
 }
 .image-grid {
