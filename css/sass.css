@@ -698,6 +698,23 @@ main {
   padding-right: 1.5em;
 }
 
+.bracket-hover .bracketed {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bracket-hover .bracketed::before, .bracket-hover .bracketed::after {
+  content: "[";
+  visibility: hidden;
+}
+.bracket-hover:hover .bracketed {
+  visibility: visible;
+  opacity: 1;
+}
+.bracket-hover:hover .bracketed::before, .bracket-hover:hover .bracketed::after {
+  visibility: visible;
+}
+
 .clip-image {
   position: relative;
   overflow: hidden;
