@@ -405,7 +405,6 @@ body {
   font-weight: 300;
   font-family: "EB Garamond", serif;
   font-size: 18px;
-  font-weight: 300;
 }
 
 p, li {
@@ -445,15 +444,32 @@ h1 {
 
 summary {
   all: unset;
-  display: inline;
-  font-size: inherit;
+  display: block;
   font-family: "EB Garamond", serif;
   font-weight: 300;
+  font-size: inherit;
   line-height: 1.6;
-  color: inherit !important;
+  color: inherit;
+  cursor: pointer;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: pointer;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga", "kern";
+  font-variation-settings: "wght" 300;
+}
+
+summary span {
+  display: inline;
+  font-family: "EB Garamond", serif;
+  font-weight: 300;
+  font-size: inherit;
+  line-height: 1.6;
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga", "kern";
+  font-variation-settings: "wght" 300;
 }
 
 /**
