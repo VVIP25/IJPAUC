@@ -51,36 +51,35 @@ h1 {
   text-decoration: underline;
 }
 
-// ✅ Summary element reset
+// ✅ Reset and style <summary> for consistent cross-browser rendering
 summary {
   all: unset;
-  display: block; // ← Avoid native layout quirks
+  display: block;
   font-family: "EB Garamond", serif;
-  font-weight: 300;
   font-size: inherit;
   line-height: 1.6;
   color: inherit;
   cursor: pointer;
 
+  // Font rendering enhancements for macOS
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "liga", "kern";
-  font-variation-settings: "wght" 300;
+
+  // Removed font-variation-settings to avoid conflict with font-weight
+  font-weight: 300;
 }
 
-// ✅ Span inside summary — avoids native rendering issues
+// ✅ Consistent styling for child <span> inside summary (if used for toggles)
 summary span {
   display: inline;
   font-family: "EB Garamond", serif;
-  font-weight: 300;
   font-size: inherit;
+  font-weight: 300;
   line-height: 1.6;
   color: inherit;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "liga", "kern";
-  font-variation-settings: "wght" 300;
 }
