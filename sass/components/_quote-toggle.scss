@@ -25,9 +25,9 @@
   }
 
 ul {
-  margin-top: 0.75em;
-  padding-left: 1em;
-  border-left: 3px solid #ccc;
+  margin-top: inherit;
+  padding-left: inherit;
+  border-left: inherit;
   color: inherit; // ← ✅ Use this instead of #444
 }
 
