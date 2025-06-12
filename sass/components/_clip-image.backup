@@ -36,24 +36,9 @@
     bottom: 0;
   }
 
-  video {
+  img {
     display: block;
     width: 100%;
     height: auto;
-    position: relative;
-    z-index: 3; // Ensures controls sit above caption
-  }
-
-  figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 0.9em;
-    z-index: 2;
-    pointer-events: none; // Allows clicks to reach the video controls
   }
 }

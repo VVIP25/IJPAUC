@@ -1,6 +1,6 @@
 @use "../abstracts/variables";
 
-/**p
+/** 
  * Basic typography style for copy text
  */
 
@@ -9,11 +9,12 @@ body {
   font-weight: 300;
   font-family: variables.$text-font-stack;
   font-size: 18px; // or 20px if you prefer
+  line-height: 1.6;
 }
 
 p, li {
   font-size: 1em; // or 1.1em if you want it a bit larger
-  line-height: 1.6;
+  line-height: inherit;
 }
 
 .header a {
@@ -51,14 +52,16 @@ h1 {
   text-decoration: underline;
 }
 
-// ✅ Reset and style <summary> for consistent cross-browser rendering
+// ✅ Reset and style <summary> for consistent cross-platform rendering
 summary {
   all: unset;
   display: block;
   font-family: "EB Garamond", serif;
   font-size: inherit;
+  font-weight: 400; // ⬅️ Changed from 300
   line-height: 1.6;
   color: inherit;
+  letter-spacing: 0.01em; // ⬅️ Added
   cursor: pointer;
 
   // Font rendering enhancements for macOS
@@ -66,18 +69,18 @@ summary {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  // Removed font-variation-settings to avoid conflict with font-weight
-  font-weight: 300;
+  font-smooth: always; // non-standard, safe to ignore
 }
 
-// ✅ Consistent styling for child <span> inside summary (if used for toggles)
+// ✅ Consistent styling for <span> inside <summary>
 summary span {
   display: inline;
   font-family: "EB Garamond", serif;
   font-size: inherit;
-  font-weight: 300;
+  font-weight: 400; // ⬅️ Changed from 300
   line-height: 1.6;
   color: inherit;
+  letter-spacing: 0.01em; // ⬅️ Added
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
