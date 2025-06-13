@@ -397,52 +397,6 @@ h3 {
   margin-bottom: 0.5em;
 }
 
-/** 
- * Basic typography style for copy text
- */
-body {
-  color: rgb(0, 0, 0);
-  font-weight: 300;
-  font-family: "EB Garamond", serif;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-p, li {
-  font-size: 1em;
-  line-height: inherit;
-}
-
-.header a {
-  text-decoration: none;
-}
-
-body.work-bg {
-  color: hsl(255, 100%, 100%);
-}
-
-figcaption {
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-h1 {
-  font-size: 3vw;
-  margin: 1em 0;
-}
-
-.bold-text {
-  font-weight: 900;
-}
-
-.script-mark {
-  font-family: "EB Garamond", serif !important;
-}
-
-.underlined {
-  text-decoration: underline;
-}
-
 summary {
   all: unset; /* removes all default styles */
   display: block; /* or inline-block depending on your design */
