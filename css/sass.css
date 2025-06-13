@@ -954,6 +954,25 @@ main {
   cursor: zoom-in;
 }
 
+.image-grid .tall-image {
+  grid-column: span 1;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-height: 100%;
+}
+
+.image-grid .tall-image img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
+}
+
 .image-grid-2x2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
