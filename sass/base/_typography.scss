@@ -1,26 +1,69 @@
-summary {
-  all: unset; /* removes all default styles */
-  display: block; /* or inline-block depending on your design */
-  cursor: pointer; /* restore the toggle affordance */
-  font: inherit; /* ensures same font family, weight, style, size */
-  color: inherit; /* ensures text color is the same */
-  line-height: normal; /* prevent line height mismatch */
-  font-smoothing: antialiased; /* sometimes helps */
-  -webkit-font-smoothing: antialiased; /* for Safari */
-  -moz-osx-font-smoothing: grayscale; /* for Firefox on macOS */
-} // ✅ this was missing!
+@use "../abstracts/variables";
 
-// ✅ Consistent styling for <span> inside <summary>
-summary span {
-  display: inline;
-  font-family: "EB Garamond", serif;
-  font-size: inherit;
-  font-weight: 400; // ⬅️ Changed from 300
+/**p
+ * Basic typography style for copy text
+ */
+
+body {
+  color: variables.$text-color;
+  font-weight: 300;
+  font-family: variables.$text-font-stack;
+font-size: 18px; // or 20px if you prefer
+font-weight: 300;
+}
+
+p, li {
+  font-size: 1em; // or 1.1em if you want it a bit larger
   line-height: 1.6;
-  color: inherit;
-  letter-spacing: 0.01em; // ⬅️ Added
+}
 
+.header a {
+  text-decoration: none;
+}
+
+body.work-bg {
+  color: variables.$work-text-color;
+}
+
+figcaption
+{
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.largequote
+{
+  // font-size: 1.5em;
+  // font-weight: 900;
+}
+
+h1
+{
+  font-size: 3vw; 
+  margin: 1em 0;
+}
+
+.bold-text {
+  font-weight: 900;
+}
+
+.script-mark {
+  font-family: variables.$text-font-stack !important;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+summary {
+  all: unset;
+  display: inline;
+  font-size: inherit;
+  font-family: "EB Garamond", serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: inherit !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  cursor: pointer;
 }
