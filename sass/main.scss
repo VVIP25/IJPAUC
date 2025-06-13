@@ -23,6 +23,7 @@
 
 // 5. Components
 @use 'components/accordionsection';
+@use 'components/book-page';
 @use 'components/blockquote';
 @use 'components/bracket-hover';
 @use 'components/clip-image';
@@ -31,6 +32,7 @@
 @use 'components/hero_image';
 @use 'components/image-grid';
 @use 'components/image-grid-2';
+@use 'components/image-grid-strict169';
 @use 'components/index-entry';
 @use 'components/letter';
 @use 'components/menu_button';
@@ -40,6 +42,7 @@
 @use 'components/modal';
 @use 'components/movietitle';
 @use 'components/nav';
+@use 'components/newspaper-block';
 @use 'components/newspaper';
 @use 'components/police-report';
 @use 'components/quote-toggle';
