@@ -933,6 +933,21 @@ main {
     font-size: 10cqw;
   }
 }
+.hover-reveal::after {
+  content: attr(data-name);
+  visibility: hidden;
+  opacity: 0;
+  margin-left: 0.5em;
+  font-style: italic;
+  color: #666;
+  transition: opacity 0.3s ease;
+}
+
+.hover-reveal:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
