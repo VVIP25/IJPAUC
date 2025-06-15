@@ -903,20 +903,20 @@ main {
   margin-bottom: 2em;
 }
 
-#hero-image {
-  width: 768px;
+.hero-media {
+  width: 768px !important;
   height: auto;
   display: block;
   object-fit: cover;
   object-position: top;
   margin: auto;
 }
-
 @media (max-width: 768px) {
-  #hero-image {
-    width: 100%;
+  .hero-media {
+    width: 100% !important;
   }
 }
+
 .hero-image-text {
   width: 100%;
   position: absolute;
@@ -927,12 +927,12 @@ main {
   text-align: center;
   font-size: 2.5em;
 }
-
 @media (max-width: 768px) {
   .hero-image-text {
     font-size: 10cqw;
   }
 }
+
 .hover-reveal::after {
   content: attr(data-name);
   visibility: hidden;
