@@ -987,11 +987,14 @@ main {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
 }
 
 .image-grid a {
   display: block;
   cursor: zoom-in;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .image-grid .tall-image {
@@ -1011,6 +1014,17 @@ main {
   border-radius: 8px;
   display: block;
   object-fit: contain;
+}
+
+.image-grid.no-bg-grid figure:first-child {
+  background-color: transparent;
+  box-shadow: none;
+}
+.image-grid.no-bg-grid figure:first-child img,
+.image-grid.no-bg-grid figure:first-child a {
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
 }
 
 .image-grid-2x2 {

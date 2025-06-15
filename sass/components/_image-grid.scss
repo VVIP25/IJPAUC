@@ -39,15 +39,18 @@
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px; // ensures images conform to figure’s shape
 }
 
 .image-grid a {
   display: block;
   cursor: zoom-in;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .image-grid .tall-image {
-  grid-column: span 1; // or span 2 if you prefer
+  grid-column: span 1; // change to span 2 if desired
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -60,9 +63,20 @@
   max-width: 100%;
   height: auto;
   width: auto;
-  border-radius: 8px; // optional, image inherits from container
+  border-radius: 8px;
   display: block;
   object-fit: contain;
 }
 
+// Special case override for a single image grid variant
+.image-grid.no-bg-grid figure:first-child {
+  background-color: transparent;
+  box-shadow: none;
 
+  img,
+  a {
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+  }
+}
