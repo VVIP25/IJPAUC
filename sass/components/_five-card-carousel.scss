@@ -1,18 +1,17 @@
-.wraparound-carousel {
+.five-card-carousel {
   position: relative;
-  width: 100%;
   max-width: 960px;
   aspect-ratio: 960 / 475;
   margin: auto;
   overflow: hidden;
-  border-radius: 8px;
   background: #fff;
+  border-radius: 8px;
 
   input[type="radio"] {
     display: none;
   }
 
-  .wrap-slide {
+  .card {
     position: absolute;
     inset: 0;
     opacity: 0;
@@ -30,48 +29,42 @@
     figcaption {
       position: absolute;
       bottom: 0;
-      left: 0;
       width: 100%;
-      padding: 0.5rem;
       background: rgba(255, 255, 255, 0.85);
+      padding: 0.5rem;
       font-size: 0.9rem;
-      color: #444;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    &:hover figcaption {
-      opacity: 1;
+      text-align: center;
     }
   }
 
-  // Slide visibility logic
-  #wrap1:checked ~ .slide1,
-  #wrap2:checked ~ .slide2,
-  #wrap3:checked ~ .slide3,
-  #wrap4:checked ~ .slide4,
-  #wrap5:checked ~ .slide5 {
+  #c1:checked ~ .card1,
+  #c2:checked ~ .card2,
+  #c3:checked ~ .card3,
+  #c4:checked ~ .card4,
+  #c5:checked ~ .card5 {
     opacity: 1;
     pointer-events: auto;
     z-index: 2;
   }
 
-  .carousel-nav {
+  .nav-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
     gap: 0.5rem;
-    margin-top: 0.5rem;
 
     label {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
       cursor: pointer;
-      padding: 0.3rem 0.5rem;
-      background: #ddd;
-      border-radius: 4px;
       transition: background 0.3s;
 
       &:hover {
-        background: #bbb;
+        background: #999;
       }
     }
   }
