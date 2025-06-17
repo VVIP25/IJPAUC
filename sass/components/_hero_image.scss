@@ -12,6 +12,18 @@
   object-fit: cover;
   object-position: top;
   margin: auto;
+  border: none;
+
+  // Remove iOS Safari's invisible play overlay
+  &::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+  }
+
+  // Optional: hide controls area on iOS completely
+  &::-webkit-media-controls {
+    display: none !important;
+  }
 
   @media (max-width: 768px) {
     width: 100% !important;
@@ -32,4 +44,3 @@
     font-size: 10cqw;
   }
 }
-

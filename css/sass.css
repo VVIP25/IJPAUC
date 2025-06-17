@@ -910,6 +910,14 @@ main {
   object-fit: cover;
   object-position: top;
   margin: auto;
+  border: none;
+}
+.hero-media::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+.hero-media::-webkit-media-controls {
+  display: none !important;
 }
 @media (max-width: 768px) {
   .hero-media {
