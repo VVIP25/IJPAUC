@@ -7,11 +7,11 @@ $cursor-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg
   }
 
   label::after {
-    content: " 🔍 OFF";
+    content: " 🔍";
   }
 
   input[type="checkbox"]:checked + label::after {
-    content: " 🔍 ON";
+    content: " 🔍";
   }
 }
 

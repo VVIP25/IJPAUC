@@ -1313,10 +1313,10 @@ main {
   display: none;
 }
 .magnifier-toggle label::after {
-  content: " 🔍 OFF";
+  content: " 🔍";
 }
 .magnifier-toggle input[type=checkbox]:checked + label::after {
-  content: " 🔍 ON";
+  content: " 🔍";
 }
 
 marginalia {
