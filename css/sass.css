@@ -1333,6 +1333,18 @@ body:has(#magnify-toggle:checked) .magnifier-zone :hover > marginalia {
   display: inline;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: none;
+}
+
+body:has(#magnify-toggle:checked) .magnifier-zone a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
 .magnify-container {
   position: relative;
   overflow: hidden;

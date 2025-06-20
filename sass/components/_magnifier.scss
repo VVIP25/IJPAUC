@@ -33,3 +33,17 @@ body:has(#magnify-toggle:checked) {
     display: inline;
   }
 }
+
+// By default, links look plain (no underline)
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: none;
+}
+
+// In magnify mode, reveal underline or other styles
+body:has(#magnify-toggle:checked) .magnifier-zone a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
