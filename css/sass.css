@@ -1309,6 +1309,30 @@ main {
   user-select: none;
 }
 
+.magnifier-toggle input[type=checkbox] {
+  display: none;
+}
+.magnifier-toggle label::after {
+  content: " 🔍 OFF";
+}
+.magnifier-toggle input[type=checkbox]:checked + label::after {
+  content: " 🔍 ON";
+}
+
+marginalia {
+  display: none;
+  font-style: italic;
+  color: darkred;
+  margin-left: 0.5em;
+}
+
+body:has(#magnify-toggle:checked) .magnifier-zone * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24'><circle cx='10' cy='10' r='9' stroke='black' stroke-width='2' fill='white'/><line x1='15' y1='15' x2='22' y2='22' stroke='black' stroke-width='2'/></svg>") 10 10, auto;
+}
+body:has(#magnify-toggle:checked) .magnifier-zone :hover > marginalia {
+  display: inline;
+}
+
 .magnify-container {
   position: relative;
   overflow: hidden;
