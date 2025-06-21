@@ -1387,6 +1387,30 @@ body:has(#magnify-toggle:checked) .magnifier-zone a {
   animation: followMouse 0s infinite;
 }
 
+.meta-line {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 1rem;
+}
+.meta-line a,
+.meta-line span {
+  display: inline;
+}
+.meta-line .magnifier-toggle {
+  display: inline-flex;
+  align-items: center;
+}
+.meta-line .magnifier-toggle input[type=checkbox] {
+  display: none;
+}
+.meta-line .magnifier-toggle label {
+  cursor: pointer;
+  font-size: 1.1em;
+  line-height: 1;
+  margin-left: 0.5ch;
+}
+
 .microlibrary {
   font-family: Georgia, serif;
   padding: 1rem;
@@ -1926,6 +1950,41 @@ marginalia {
 
 .show-marginalia marginalia {
   display: inline;
+}
+
+body:has(#magnify-toggle:checked) .magnifier-zone * {
+  cursor: zoom-in;
+}
+
+body:has(#magnify-toggle:checked) .magnifier-zone :hover > marginalia {
+  display: inline;
+}
+
+body:has(#magnify-toggle:checked) .magnifier-zone img {
+  transition: transform 0.3s ease, object-position 0.3s ease;
+  transform: scale(1.8);
+  object-fit: cover;
+  object-position: center center;
+}
+
+body:has(#magnify-toggle:checked) .magnifier-zone img:hover {
+  cursor: zoom-in;
+}
+
+body:has(#pa-toggle:checked) marginalia[data-type=pa] {
+  display: inline !important;
+}
+
+body:has(#ci-toggle:checked) marginalia[data-type=ci] {
+  display: inline !important;
+}
+
+body:has(#ch-toggle:checked) marginalia[data-type=ch] {
+  display: inline !important;
+}
+
+body:has(#x-toggle:checked) marginalia[data-type=x] {
+  display: inline !important;
 }
 
 /*# sourceMappingURL=sass.css.map */

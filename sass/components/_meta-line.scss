@@ -1,0 +1,27 @@
+.meta-line {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 1rem;
+
+  a,
+  span {
+    display: inline;
+  }
+
+  .magnifier-toggle {
+    display: inline-flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label {
+      cursor: pointer;
+      font-size: 1.1em;
+      line-height: 1;
+      margin-left: 0.5ch;
+    }
+  }
+}

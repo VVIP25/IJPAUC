@@ -43,6 +43,7 @@
 @use 'components/mini-album';
 @use 'components/magnifier';
 @use 'components/magnify-container';
+@use 'components/meta-line';
 @use 'components/microlibrary';
 @use 'components/modal';
 @use 'components/movietitle';
@@ -103,15 +104,59 @@ figure figcaption {
 figure:hover figcaption {
   opacity: 1;
 }
+// ——— MARGINALIA SYSTEM (modular with mixins) ———
 
-marginalia {
-  display: none;
-  color: #666;
-  font-style: italic;
-  font-size: 0.9em;
-  margin-left: 0.3em;
+// Mixin: Base appearance
+@mixin marginalia-base {
+  marginalia {
+    display: none;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-left: 0.3em;
+  }
+
+  .show-marginalia marginalia {
+    display: inline;
+  }
 }
 
-.show-marginalia marginalia {
-  display: inline;
+// Mixin: Magnify mode hover + cursor + image zoom
+@mixin marginalia-hover-reveal($toggle: "#magnify-toggle", $zone: ".magnifier-zone") {
+  // Use default zoom cursor instead of custom magnifier icon
+  body:has(#{$toggle}:checked) #{$zone} * {
+    cursor: zoom-in;
+  }
+
+  body:has(#{$toggle}:checked) #{$zone} :hover > marginalia {
+    display: inline;
+  }
+
+  // Image zoom on hover (pure CSS)
+  body:has(#{$toggle}:checked) #{$zone} img {
+    transition: transform 0.3s ease, object-position 0.3s ease;
+    transform: scale(1.8); // Zoom level
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  body:has(#{$toggle}:checked) #{$zone} img:hover {
+    cursor: zoom-in;
+  }
 }
+
+// Mixin: Category filters
+@mixin marginalia-filter($types...) {
+  @each $type in $types {
+    body:has(##{$type}-toggle:checked) marginalia[data-type="#{$type}"] {
+      display: inline !important;
+    }
+  }
+}
+
+// ——— Apply mixins below ———
+
+@include marginalia-base;
+@include marginalia-hover-reveal;
+@include marginalia-filter(pa, ci, ch, x);
+
